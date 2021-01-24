@@ -3,8 +3,10 @@
  */
 package MyCalculator;
 
-public class Library {
-    public boolean someLibraryMethod() {
-        return true;
+public class Grundrechnungsarten {
+	
+    public Integer addTwoNumbers(Integer num1, Integer num2) {
+    	
+        return num1 + num2;
     }
 }

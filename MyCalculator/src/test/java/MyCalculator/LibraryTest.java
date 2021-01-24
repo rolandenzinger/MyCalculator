@@ -8,7 +8,12 @@ import static org.junit.Assert.*;
 
 public class LibraryTest {
     @Test public void testSomeLibraryMethod() {
-        Library classUnderTest = new Library();
-        assertTrue("someLibraryMethod should return 'true'", classUnderTest.someLibraryMethod());
+        Grundrechnungsarten classUnderTest = new Grundrechnungsarten();
+        assertEquals((Integer) 6, classUnderTest.addTwoNumbers(4, 2));
+        assertEquals((Integer) 0, classUnderTest.addTwoNumbers(-1, 1));
+        assertEquals((Integer) 4, classUnderTest.addTwoNumbers(-4, 8));
+        
+        
+        
     }
 }
