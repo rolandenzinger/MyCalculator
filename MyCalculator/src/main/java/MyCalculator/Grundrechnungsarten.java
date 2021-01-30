@@ -9,4 +9,13 @@ public class Grundrechnungsarten {
     	
         return num1 + num2;
     }
+    
+    public Integer multiplyTwoNumbers (Integer num1, Integer num2) {
+    	
+    	System.out.println("Explain what to do");
+    	
+    	return num1 * num2;
+    	
+    	
+    }
 }
