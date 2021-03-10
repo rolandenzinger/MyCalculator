@@ -12,10 +12,24 @@ public class Grundrechnungsarten {
     
     public Integer multiplyTwoNumbers (Integer num1, Integer num2) {
     	
-    	System.out.println("Explain what to do");
-    	
     	return num1 * num2;
     	
     	
+    }
+    
+    public Integer subtractTwoNumbers (Integer num1, Integer num2) {
+    	return num1 - num2;
+    }
+    
+    public Double divideTwoNumbers (Integer num1, Integer num2) {
+    	
+    	try {
+    		
+    		return (double) (num1 / num2);
+    	}
+    	catch (ArithmeticException e) {
+            System.out.println ("Division durch Null nicht möglich: " + e);
+         }
+		return null;
     }
 }

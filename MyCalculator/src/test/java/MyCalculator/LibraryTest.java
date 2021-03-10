@@ -7,11 +7,39 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class LibraryTest {
-    @Test public void testSomeLibraryMethod() {
+    @Test public void testAddTwoNumbers() {
         Grundrechnungsarten classUnderTest = new Grundrechnungsarten();
         assertEquals((Integer) 6, classUnderTest.addTwoNumbers(4, 2));
         assertEquals((Integer) 0, classUnderTest.addTwoNumbers(-1, 1));
-        assertEquals((Integer) 4, classUnderTest.addTwoNumbers(-4, 8));
+        assertEquals((Integer) 4, classUnderTest.addTwoNumbers(-4, 8)); 
+    }
+    
+    @Test public void testMultiplyTwoNumbers() {
+        Grundrechnungsarten classUnderTest = new Grundrechnungsarten();
+        assertEquals((Integer) 0, classUnderTest.multiplyTwoNumbers(0, 0));
+        assertEquals((Integer) (-1), classUnderTest.multiplyTwoNumbers(-1, 1));
+        assertEquals((Integer) 0, classUnderTest.multiplyTwoNumbers(4, 0)); 
+        assertEquals((Integer) 16, classUnderTest.multiplyTwoNumbers(4, 4)); 
+    }
+    
+    @Test public void testSubtractTwoNumbers() {
+        Grundrechnungsarten classUnderTest = new Grundrechnungsarten();
+        assertEquals((Integer) 0, classUnderTest.subtractTwoNumbers(1, 1));
+        assertEquals((Integer) (-1), classUnderTest.subtractTwoNumbers(0, 1));
+        assertEquals((Integer) (-16), classUnderTest.subtractTwoNumbers(4,20)); 
+        assertEquals((Integer) (1), classUnderTest.subtractTwoNumbers(-4, -5)); 
+    }
+    
+    @Test public void testDivideTwoNumbers() {
+        Grundrechnungsarten classUnderTest = new Grundrechnungsarten();
+        assertEquals((Double) 1.0, classUnderTest.divideTwoNumbers(1, 1));
+        assertEquals((Double) 0.0, classUnderTest.divideTwoNumbers(0, 1));
+        assertEquals((Double) 5.0, classUnderTest.divideTwoNumbers(20,4)); 
+        assertEquals((Double) 1.0, classUnderTest.divideTwoNumbers(-4, -4)); 
+        
+        assertEquals(null,classUnderTest.divideTwoNumbers(4, 0));
+        
+        
         
         
         
